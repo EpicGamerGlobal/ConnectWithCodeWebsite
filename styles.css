@@ -1,0 +1,158 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shiny-title {
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #00d4ff, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for non-supported browsers */
+}
+
+nav {
+    margin-top: 80px;
+    text-align: center;
+    background-color: #000;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 20px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a:hover {
+    color: #00d4ff;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00d4ff;
+    transition: width 0.3s ease;
+    margin: 0 auto;
+}
+
+nav a:hover::after {
+    width: 50%;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 10px 0 30px;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #007bff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.signup-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.signup-button:hover {
+    background-color: #0056b3;
+}
+
+.title-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color from the parent (shiny-title) */
+    cursor: pointer; /* Ensures it behaves like a link */
+}
+
+.title-link:hover {
+    text-decoration: underline; /* Optional: underline on hover for better user feedback */
+}

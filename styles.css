@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
@@ -7,33 +8,43 @@ body {
     overflow-x: hidden;
 }
 
+/* Header Styles */
 header {
     background-color: #000;
     color: #fff;
-    padding: 20px 40px;
+    position: relative;
+    padding: 0 20px 10px; /* Adjust bottom padding to align the logo */
     text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .shiny-title {
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
-    background: linear-gradient(90deg, #00d4ff, #007bff);
+    background: linear-gradient(90deg, #ffffff, #d4d4d4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent; /* Fallback for non-supported browsers */
+    margin: 0;
+    padding: 10px 0;
 }
 
+.logo img {
+    height: 40px; /* Smaller logo size */
+    position: absolute;
+    top: 10px; /* Adjust vertical alignment */
+    left: 20px; /* Adjust horizontal alignment */
+}
+
+/* Navigation Bar Styles */
 nav {
-    margin-top: 80px;
-    text-align: center;
     background-color: #000;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
 }
 
 nav a {
@@ -44,11 +55,11 @@ nav a {
     margin: 0 20px;
     display: inline-block;
     position: relative;
-    padding-bottom: 5px;
+    padding: 5px 0;
 }
 
 nav a:hover {
-    color: #00d4ff;
+    color: #00d4ff; /* Highlight text color on hover */
 }
 
 nav a::after {
@@ -56,15 +67,16 @@ nav a::after {
     display: block;
     width: 0;
     height: 2px;
-    background: #00d4ff;
+    background: #fff; /* White underline */
     transition: width 0.3s ease;
     margin: 0 auto;
 }
 
 nav a:hover::after {
-    width: 50%;
+    width: 100%; /* Full underline on hover */
 }
 
+/* Hero Section Styles */
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -100,6 +112,7 @@ nav a:hover::after {
     color: #fff;
 }
 
+/* Section Styles */
 .section {
     padding: 60px 20px;
     text-align: center;
@@ -117,6 +130,7 @@ nav a:hover::after {
     margin-bottom: 20px;
 }
 
+/* Footer Styles */
 .footer {
     background-color: #000;
     color: #fff;
@@ -145,14 +159,4 @@ nav a:hover::after {
 
 .signup-button:hover {
     background-color: #0056b3;
-}
-
-.title-link {
-    text-decoration: none;
-    color: inherit; /* Inherit color from the parent (shiny-title) */
-    cursor: pointer; /* Ensures it behaves like a link */
-}
-
-.title-link:hover {
-    text-decoration: underline; /* Optional: underline on hover for better user feedback */
 }

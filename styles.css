@@ -114,20 +114,41 @@ nav a:hover::after {
 
 /* Section Styles */
 .section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #fff;
-    margin: 40px 0;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 .section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+strong {
+    font-weight: bold;
+    color: #000;
 }
 
 /* Footer Styles */
@@ -159,4 +180,20 @@ nav a:hover::after {
 
 .signup-button:hover {
     background-color: #0056b3;
+}
+/* Reviews Section */
+.review-panel {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.review-panel p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
 }

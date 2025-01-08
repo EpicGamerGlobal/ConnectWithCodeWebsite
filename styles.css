@@ -10,43 +10,44 @@ body {
     overflow-x: hidden;
 }
 
-/* Header Styles */
+/* header  */
 header {
     background-color: #000;
     color: #fff;
-    position: relative;
-    padding: 0 20px 10px; /* Adjust bottom padding to align the logo */
-    text-align: center;
+    position: sticky;
+    top: 0; 
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
+/* logo */
+.logo img {
+    height: 60px;
+    margin-right: 15px;
+    padding: 20px 0px;
+}
+
+/* title */
 .shiny-title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
-    text-align: center;
     background: linear-gradient(90deg, #ffffff, #d4d4d4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent; /* Fallback for non-supported browsers */
     margin: 0;
-    padding: 25px 0;
 }
 
-.logo img {
-    height: 125px; /* Smaller logo size */
-    position: absolute;
-    top: 10px; /* Adjust vertical alignment */
-    left: 20px; /* Adjust horizontal alignment */
-}
-
-/* Navigation Bar Styles */
+/* nav */
 nav {
-    background-color: #000;
-    padding: 10px 0;
-    text-align: center;
-    position: relative;
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px; 
 }
 
 nav a {
@@ -54,14 +55,12 @@ nav a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
-    margin: 0 20px;
-    display: inline-block;
-    position: relative;
     padding: 5px 0;
+    position: relative;
 }
 
 nav a:hover {
-    color: #00d4ff; /* Highlight text color on hover */
+    color: #00d4ff;
 }
 
 nav a::after {
@@ -69,13 +68,13 @@ nav a::after {
     display: block;
     width: 0;
     height: 2px;
-    background: #fff; /* White underline */
+    background: #fff;
     transition: width 0.3s ease;
     margin: 0 auto;
 }
 
 nav a:hover::after {
-    width: 100%; /* Full underline on hover */
+    width: 100%;
 }
 
 /* Hero Section Styles */
@@ -99,12 +98,19 @@ nav a:hover::after {
 
 div.wcu {
     background: linear-gradient(180deg, #3496ff, #007bff);
+    text-align: center;
 }
 
 section.wcu {
     color: white;
     padding: 30px 25%;
     text-align: center;
+}
+
+@media (max-width: 780px) {
+    section.wcu {
+        padding: 30px 5%; /* Reduce padding to 5% for more space */
+    }
 }
 
 h2.wcu {
@@ -115,6 +121,11 @@ h2.wcu {
 h3.wcu {
     font-size: 2rem;
     margin-top: 80px;
+}
+
+.wcu ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
 }
 
 .s {
@@ -169,6 +180,25 @@ button.cta-button:hover {
     color: #007bff;
 }
 
+a.nav-button {
+    background: #FFA500;
+    color: #fff;
+    padding: 13px 25px;
+}
+
+.nav-button {
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #fff;
+    color: #FFA500;
+}
 
 
 /* Section Styles */
@@ -212,6 +242,7 @@ ul {
     padding-left: 20px;
     margin: 20px 0;
     list-style-type: none;
+    text-align: center;
 }
 
 ul li {
